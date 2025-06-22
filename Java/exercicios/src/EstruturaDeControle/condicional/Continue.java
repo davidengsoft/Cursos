@@ -1,4 +1,4 @@
-package exercicios.src.controle.condicional;
+package exercicios.src.EstruturaDeControle.condicional;
 
 public class Continue {
 

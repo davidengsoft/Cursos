@@ -1,4 +1,4 @@
-package controle.condicional;
+package exercicios.src.EstruturaDeControle.condicional;
 
 import java.util.Scanner;
 

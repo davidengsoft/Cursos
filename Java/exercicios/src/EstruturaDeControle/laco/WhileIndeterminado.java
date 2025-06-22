@@ -1,4 +1,4 @@
-package controle.laco;
+package exercicios.src.EstruturaDeControle.laco;
 
 import java.util.Scanner;
 

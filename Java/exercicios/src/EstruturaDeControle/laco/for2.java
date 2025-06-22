@@ -1,4 +1,4 @@
-package exercicios.src.controle.laco;
+package exercicios.src.EstruturaDeControle.laco;
 
 public class for2 {
 

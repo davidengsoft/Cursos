@@ -1,4 +1,4 @@
-package controle.laco;
+package exercicios.src.EstruturaDeControle.laco;
 
 public class WhileDeterminado {
 

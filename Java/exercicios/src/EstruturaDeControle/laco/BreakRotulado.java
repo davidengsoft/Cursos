@@ -1,4 +1,4 @@
-package exercicios.src.EstruturaDeControle;
+package exercicios.src.EstruturaDeControle.laco;
 
 public class BreakRotulado {
 
