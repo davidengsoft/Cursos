@@ -1,9 +1,8 @@
 package exercicios.src.arrays.desafios;
 
-public class NotasAluno {
+public class CalcularMedia {
 
     String nome;
-    double nota;
 
     String calcularMedia(double[] notas) {
         double total = 0, media;

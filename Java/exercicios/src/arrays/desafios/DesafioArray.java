@@ -6,7 +6,7 @@ public class DesafioArray {
 
     public static void main(String[] args) {
 
-        NotasAluno aluno1 = new NotasAluno();
+        CalcularMedia aluno1 = new CalcularMedia();
         int cont = 0;
         Scanner entrada = new Scanner(System.in);
 
