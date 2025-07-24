@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @SuppressWarnings("ALL")
-public class ConjuntoBaguncado {
+public class ConjuntoHeterogeneo {
 
     public static void main(String[] args) {
 
