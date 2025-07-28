@@ -15,6 +15,11 @@ public class Usuario {
         return "Meu nome é " + this.nome + ".";
     }
 
+
+    public int hashCode() {
+        return Objects.hashCode(nome);
+    }
+
     public boolean equals(Object obj) {
         Usuario usuario = (Usuario) obj;
         return this.nome.equals(usuario.nome);
