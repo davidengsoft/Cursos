@@ -2,9 +2,14 @@ package exercicios.src.poo;
 
 public class Motor {
 
+    Carro carro; //Objeto carro foi instânciado
     boolean ligado = false;
     double fatorInjecao = 1;
 
+
+    Motor(Carro carro) {
+        this.carro = carro;
+    }
 
     int giros() {
         if (!ligado) {
