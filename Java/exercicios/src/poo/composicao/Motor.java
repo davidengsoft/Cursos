@@ -1,4 +1,4 @@
-package exercicios.src.poo;
+package exercicios.src.poo.composicao;
 
 public class Motor {
 
