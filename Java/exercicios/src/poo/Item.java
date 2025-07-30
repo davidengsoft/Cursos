@@ -3,12 +3,14 @@ package exercicios.src.poo;
 public class Item {
 
     String nome;
-    int quantidadde;
+    int quantidade;
     double preco;
 
-    Item(String nome, int quantidade, double preco) {
+    Compra compra;
+
+    Item (String nome, int quantidade, double preco) {
         this.nome = nome;
-        this.quantidadde = quantidade;
+        this.quantidade = quantidade;
         this.preco = preco;
     }
 }
