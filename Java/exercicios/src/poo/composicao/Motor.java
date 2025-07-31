@@ -2,13 +2,13 @@ package exercicios.src.poo.composicao;
 
 public class Motor {
 
-    Carro carro; //Objeto carro foi instânciado
+    Carro carro; // Apenas declaração. Objeto não instanciado.
     boolean ligado = false;
     double fatorInjecao = 1;
 
 
     Motor(Carro carro) {
-        this.carro = carro;
+        this.carro = carro; //O objeto está sendo instanciado aqui.
     }
 
     int giros() {

@@ -2,13 +2,13 @@ package exercicios.src.poo.composicao;
 
 public class Carro {
 
-    Motor motor; //Objeto motor foi instanciado.
+    Motor motor; //Apenas declaração. Objeto não instanciado.
 
 
     Carro () {
         this.motor = new Motor(this); /*Quando intanciar um objeto da classe Carro, ele irá
                                               ser passado como argumento para o contrutor da classe
-                                              Motor. Sendo assim, this se refere ao objeto c1. */
+                                              Motor. Sendo assim, this é o objeto c1 criado em CarroTeste. */
 
     }
 
