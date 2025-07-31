@@ -13,8 +13,6 @@ public class Aluno {
     }
 
     Curso obterCusroPorNome(String nome) {
-        Curso procurado = null;
-
         for (Curso curso: this.cursos) {
             if (curso.nome.equalsIgnoreCase(nome)) {
                 return curso;
