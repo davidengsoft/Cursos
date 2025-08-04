@@ -7,10 +7,9 @@ public class Compra {
 
     final List<Item> carrinho = new ArrayList<>();
 
-
-    void adicionarItem(String nome, double preco, int qtde) {
+    void adicionarItem(String nome, double preco, int quant) {
         var produto = new Produto(nome, preco);
-        this.carrinho.add(new Item(produto, qtde));
+        this.carrinho.add(new Item(produto, quant));
     }
 
     double getValorTotal() {

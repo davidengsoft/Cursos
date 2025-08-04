@@ -4,19 +4,22 @@ public class Sistema {
 
     public static void main(String[] args) {
 
-        Cliente cliente1 = new Cliente("David");
+        Cliente cliente01 = new Cliente("David");
 
-        Compra compra1 = new Compra();
-        compra1.adicionarItem("Caneta", 1.20, 2);
-        compra1.adicionarItem("Notebook",2567.99, 1);
+        Compra compra1Cliente01 = new Compra();
+        compra1Cliente01.adicionarItem("Mouse", 60.89, 10);
+        compra1Cliente01.adicionarItem("Teclado", 58, 20);
+        compra1Cliente01.adicionarItem("Monitor 24'", 899.99, 3);
 
-        Compra compra2 = new Compra();
-        compra2.adicionarItem("Caderno", 25.50, 1);
-        compra2.adicionarItem("Impressora", 1250.80, 1);
 
-        cliente1.adicionarCompra(compra1);
-        cliente1.adicionarCompra(compra2);
+        Compra compra2Cliente01 = new Compra();
+        compra2Cliente01.adicionarItem("Fone JBL", 285, 5);
+        compra2Cliente01.adicionarItem("Soundbar", 250.90, 3);
+        compra2Cliente01.adicionarItem("Pasta térmica", 25, 18);
 
-        System.out.printf("O valor total das compras foi de R$%.2f", cliente1.getValorTotal());
+        cliente01.adicionarCompra(compra1Cliente01);
+        cliente01.adicionarCompra(compra2Cliente01);
+
+        System.out.printf("%.2f", cliente01.getValorTotal());
     }
 }

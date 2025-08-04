@@ -16,13 +16,14 @@ public class Cliente {
         this.compras.add(compra);
     }
 
+    double getValorTotal() {
+        double total = 0;
 
-   double getValorTotal() {
-       double total = 0;
+        for (Compra c: compras) {
+            total += c.getValorTotal();
+        }
 
-       for (Compra c: compras) {
-           total += c.getValorTotal();
-       }
-       return total;
-   }
+        return total;
+    }
+
 }
