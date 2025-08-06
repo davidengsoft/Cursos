@@ -20,7 +20,6 @@ public class CarroTeste {
         System.out.println(civic);
 
 
-
         System.out.print("\n");
 
 
