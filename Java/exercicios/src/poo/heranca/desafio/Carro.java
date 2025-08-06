@@ -2,10 +2,20 @@ package exercicios.src.poo.heranca.desafio;
 
 public class Carro {
 
+    final int VELOCIDADE_MAXIMA;
     int velocidadeAtual = 0;
 
+    Carro(int velocidadeMaxima) {
+        this.VELOCIDADE_MAXIMA = velocidadeMaxima;
+    }
+
+
     void acelerar() {
-        velocidadeAtual += 5;
+        if (velocidadeAtual + 5 > VELOCIDADE_MAXIMA) {
+            velocidadeAtual = VELOCIDADE_MAXIMA;
+        } else {
+            velocidadeAtual += 5;
+        }
     }
 
     void frear() {
