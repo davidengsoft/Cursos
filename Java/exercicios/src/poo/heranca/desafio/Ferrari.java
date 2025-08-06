@@ -1,0 +1,12 @@
+package exercicios.src.poo.heranca.desafio;
+
+public class Ferrari extends Carro {
+
+    void acelerar() {
+        velocidadeAtual += 15;
+    }
+
+    void frear() {
+        velocidadeAtual -= 15;
+    }
+}
