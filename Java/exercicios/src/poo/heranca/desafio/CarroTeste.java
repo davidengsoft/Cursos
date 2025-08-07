@@ -4,8 +4,8 @@ public class CarroTeste {
 
     public static void main(String[] args) {
 
-        Carro ferrari = new Ferrari(250);
-        Carro civic = new Civic(180);
+        Carro ferrari = new Ferrari(315);
+        Carro civic = new Civic(212);
 
 
         ferrari.acelerar();
