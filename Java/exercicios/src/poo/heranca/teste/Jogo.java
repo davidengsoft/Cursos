@@ -1,4 +1,8 @@
-package exercicios.src.poo.heranca;
+package exercicios.src.poo.heranca.teste;
+
+import exercicios.src.poo.heranca.Direcao;
+import exercicios.src.poo.heranca.Heroi;
+import exercicios.src.poo.heranca.Monstro;
 
 public class Jogo {
 

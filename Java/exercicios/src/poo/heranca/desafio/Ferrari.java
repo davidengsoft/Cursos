@@ -2,16 +2,14 @@ package exercicios.src.poo.heranca.desafio;
 
 public class Ferrari extends Carro {
 
-    Ferrari(int velocidadeMaxima) {
+    public Ferrari(int velocidadeMaxima) {
         super(velocidadeMaxima);
     }
 
-
-    void acelerar() {
+    public void acelerar() {
         velocidadeAtual += 15;
     }
-
-    void frear() {
+    public void frear() {
         velocidadeAtual -= 15;
     }
 }

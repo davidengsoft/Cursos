@@ -1,4 +1,8 @@
-package exercicios.src.poo.heranca.desafio;
+package exercicios.src.poo.heranca.teste;
+
+import exercicios.src.poo.heranca.desafio.Carro;
+import exercicios.src.poo.heranca.desafio.Civic;
+import exercicios.src.poo.heranca.desafio.Ferrari;
 
 public class CarroTeste {
 
