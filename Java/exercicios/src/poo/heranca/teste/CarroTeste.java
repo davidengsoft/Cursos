@@ -46,5 +46,7 @@ public class CarroTeste {
 
         System.out.println(ferrari);
 
+        System.out.println(ferrari.nivelDoAr());
+
     }
 }
