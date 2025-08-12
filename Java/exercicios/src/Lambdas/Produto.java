@@ -11,4 +11,10 @@ public class Produto {
         this.PRECO = PRECO;
         this.DESCONTO = DESCONTO;
     }
+
+
+    public String toString() {
+        double precoFinal = PRECO * (1 - DESCONTO);
+        return NOME + " tem preço de R$" + precoFinal;
+    }
 }
