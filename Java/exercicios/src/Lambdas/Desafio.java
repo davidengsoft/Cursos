@@ -14,15 +14,15 @@ public class Desafio {
 
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("Nome do produto: ");
-        nome = entrada.next();
+        System.out.print("Nome do produto: ");
+        nome = entrada.nextLine();
 
-        System.out.println("Preço do produto: ");
-        converter = entrada.next();
+        System.out.print("Preço do produto: ");
+        converter = entrada.nextLine();
         preco = Double.parseDouble(converter.replace(",", "."));
 
-        System.out.println("Desconto do produto: ");
-        converter = entrada.next();
+        System.out.print("Desconto do produto: ");
+        converter = entrada.nextLine();
         desconto = Double.parseDouble(converter.replace(",", "."));
 
         Produto produto = new Produto(nome, preco, desconto);
@@ -45,7 +45,7 @@ public class Desafio {
                 .apply(produto);
 
 
-        System.out.println(precoFinal);
+        System.out.println("O preço final do produto é " + precoFinal);
 
     }
 }
