@@ -20,7 +20,7 @@ public class Desafio {
         produtos.stream()
                 .filter(produto -> produto.getPreco() > 1500)
                 .filter(produto -> produto.getQuantEstoque() > 0)
-                .map(produto -> produto.getNome())
+                .map(Produto::getNome)
                 .forEach(System.out::println);
     }
 }
