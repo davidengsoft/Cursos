@@ -29,6 +29,5 @@ public class Exercicio {
 
         media = total / notasAlunoB.length;
         System.out.println(media);
-
     }
 }
