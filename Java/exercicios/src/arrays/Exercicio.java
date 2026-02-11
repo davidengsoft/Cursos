@@ -19,7 +19,7 @@ public class Exercicio {
         }
         media = total / notasAlunoA.length;
         System.out.println(media);
-    
+
         double[]  notasAlunoB = {6.9, 8.9, 5.9, 10};
 
         total = 0;
