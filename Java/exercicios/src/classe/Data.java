@@ -3,14 +3,8 @@ package exercicios.src.classe;
 public class Data {
 
     int dia;
-    int mes;
     int ano;
-
-    Data() {
-        dia = 1;
-        mes = 1;
-        ano = 1970;
-    }
+    int mes;
 
     Data(int dia, int mes, int ano) {
         this.dia = dia;
@@ -18,7 +12,7 @@ public class Data {
         this.ano = ano;
     }
 
-    String dataFormatada() {
-        return String.format("%d/%d/%d", dia, mes, ano);
+    String imprimirInformacao() {
+        return String.format("%d/%d/%d", this.dia, this.mes, this.ano);
     }
 }
