@@ -5,32 +5,32 @@ public class ValorVsReferencia {
     public static void main(String[] args) {
 
         double a = 2;
-        double b = a; // atribuição por valor (Tipo prmitivo)
+        double b = a; // Atribuição por valor
 
         a++;
         b--;
+        System.out.println(a + " | " + b);
 
-        System.out.println(a + " " + b);
+        Data d1 = new Data(1, 6, 2022);
+        Data d2 = d1; // Atribuição por referência
 
-        Data d1 = new Data(1, 6, 2025);
-        Data d2 = d1; // atribuição por referencia (Objeto)
+        d1.dia = 31;
+        d2.mes = 12;
+        System.out.println("\n========================\n");
+        System.out.println(d1.imprimirInformacao());
+        System.out.println(d2.imprimirInformacao());
 
-        System.out.println(d1.dataFormatada());
-        System.out.println(d2.dataFormatada());
 
-        voltarDataParaValorPadrao(d1);
-
-        System.out.println(d1.dataFormatada());
-        System.out.println(d2.dataFormatada());
+        voltarDataPadrao(d1);
+        System.out.println("\n========================\n");
+        System.out.println(d1.imprimirInformacao());
+        System.out.println(d2.imprimirInformacao());
     }
 
-    static void voltarDataParaValorPadrao(Data d) {
+    static void voltarDataPadrao(Data d) {
         d.dia = 1;
         d.mes = 1;
         d.ano = 1970;
     }
-
-    static void alterarPrimitivo(double a) {
-        a++;
-    }
 }
+
