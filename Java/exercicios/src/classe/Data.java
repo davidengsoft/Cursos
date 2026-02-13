@@ -6,6 +6,12 @@ public class Data {
     int ano;
     int mes;
 
+    Data() {
+        this.dia = 1;
+        this.mes = 1;
+        this.ano = 1970;
+    }
+
     Data(int dia, int mes, int ano) {
         this.dia = dia;
         this.mes = mes;

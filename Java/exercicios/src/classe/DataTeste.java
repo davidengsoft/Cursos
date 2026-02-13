@@ -6,8 +6,10 @@ public class DataTeste {
 
         Data d1 = new Data(4, 10, 2005);
         Data d2 = new Data(23, 3, 2005);
+        Data d3 = new Data();
 
         System.out.println(d1.imprimirInformacao());
         System.out.println(d2.imprimirInformacao());
+        System.out.println(d3.imprimirInformacao());
     }
 }
