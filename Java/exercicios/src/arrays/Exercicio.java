@@ -1,33 +1,48 @@
 package exercicios.src.arrays;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Exercicio {
 
     public static void main(String[] args) {
 
-        double total = 0, media;
         double[] notasAlunoA = new double[3];
-        notasAlunoA[0] = 7.9;
-        notasAlunoA[1] = 8;
-        notasAlunoA[2] = 6.7;
+        double[] notasAlunoB = {6.9, 8.9, 5.5};
+        double total = 0;
+        double media;
 
-        System.out.println(Arrays.toString(notasAlunoA));
+        Scanner entrada = new Scanner(System.in);
 
-        for(int i = 0; i < notasAlunoA.length; i++) {
+        for (int i = 0; i < notasAlunoA.length; i++) {
+            System.out.println("informe a " + (i+1)  + "ª nota do aluno A: ");
+            notasAlunoA[i] = entrada.nextDouble();
             total += notasAlunoA[i];
         }
+
+
         media = total / notasAlunoA.length;
-        System.out.println(media);
 
-        double[]  notasAlunoB = {6.9, 8.9, 5.9, 10};
+        System.out.println("\n" + Arrays.toString(notasAlunoA));
+        System.out.println("A média desse aluno é " + media);
 
-        total = 0;
+
+        System.out.println("\n========================\n");
+
+
         for (int i = 0; i < notasAlunoB.length; i++) {
+            System.out.println("informe a " + (i+1)  + "ª nota do aluno B: ");
+            notasAlunoB[i] = entrada.nextDouble();
             total += notasAlunoB[i];
         }
 
         media = total / notasAlunoB.length;
-        System.out.println(media);
+
+        System.out.println("\n" + Arrays.toString(notasAlunoB));
+        System.out.println("A média desse aluno é " + media);
+
+
+        entrada.close();
     }
 }
