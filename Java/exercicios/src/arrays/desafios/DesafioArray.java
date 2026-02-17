@@ -6,24 +6,30 @@ public class DesafioArray {
 
     public static void main(String[] args) {
 
-        CalcularMedia aluno1 = new CalcularMedia();
-        int cont = 0;
+
+        double[] notas;
+        double total = 0;
+        double media;
+
         Scanner entrada = new Scanner(System.in);
 
-        System.out.print("Nome do aluno: ");
-        aluno1.nome = entrada.next();
+        System.out.println("Quantas notas serão inseridas? ");
+        notas = new double[entrada.nextInt()];
 
-        System.out.print("Quantas notas deseja informar? ");
-        int quantNotas = entrada.nextInt();
+        System.out.println("\n====================\n");
 
-        double[] notasAluno = new double[quantNotas];
-
-        for(int i = 0; i < quantNotas; i++) {
-            System.out.printf("Digite a nota 0%d: ", ++cont);
-            notasAluno[i] = entrada.nextDouble();
+        for (int i = 0; i < notas.length; i++) {
+            System.out.printf("Informe a %dª nota: ", (i + 1));
+            notas[i] = entrada.nextDouble();
         }
-        entrada.close();
-        System.out.println(aluno1.calcularMedia(notasAluno));
 
+        for (double nota : notas) {
+            total += nota;
+        }
+
+        media = total / notas.length;
+        System.out.println("A média das notas é " + media);
+
+        entrada.close();
     }
 }
