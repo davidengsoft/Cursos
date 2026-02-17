@@ -4,22 +4,17 @@ public class Jantar {
 
     public static void main(String[] args) {
 
-        Pessoa p1 = new Pessoa();
-        p1.nome = "David";
-        p1.peso = 65;
+        Pessoa p1 = new Pessoa("David", 71);
 
-        Comida c1 = new Comida();
-        c1.nome = "Arroz";
-        c1.peso = 0.100;
+        Comida c1 = new Comida("Arroz", 0.250);
+        Comida c2 = new Comida("Feijão", 0.260);
+        Comida c3 = new Comida("File de peito de frango", 0.300);
 
-        System.out.println(p1.comer(c1));
+        System.out.println(p1.apresentar());
 
-        Comida c2 = new Comida();
-        c2.nome = "Feijão";
-        c2.peso = 0.100;
-
-        System.out.println(p1.comer(c2));
-
-
+        p1.comer(c1);
+        p1.comer(c2);
+        p1.comer(c3);
+        System.out.println(p1.apresentar());
     }
 }
