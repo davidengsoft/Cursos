@@ -9,29 +9,23 @@ public class ConjuntoHeterogeneo {
     public static void main(String[] args) {
 
         HashSet conjunto = new HashSet();
-
         conjunto.add(1.2);
         conjunto.add(true);
         conjunto.add("Teste");
         conjunto.add(1);
         conjunto.add('x');
 
-        System.out.println(conjunto);
-        System.out.println(conjunto.size());
-
-        conjunto.add("Teste");
-        conjunto.add('x');
-        System.out.println(conjunto.size());
+        System.out.println("Tamanho do conjunto: " + conjunto.size());
 
         System.out.println(conjunto.remove("teste"));
         System.out.println(conjunto.remove("Teste"));
+        System.out.println(conjunto.remove('x'));
 
-        System.out.println(conjunto.size());
+        System.out.println("Tamanho do conjunto: " + conjunto.size());
 
-        System.out.println(conjunto.contains("Teste"));
+        System.out.println(conjunto.contains('x'));
         System.out.println(conjunto.contains(1));
         System.out.println(conjunto.contains(true));
-
 
         Set numeros = new HashSet();
         numeros.add(1);
@@ -41,11 +35,11 @@ public class ConjuntoHeterogeneo {
         System.out.println(numeros);
         System.out.println(conjunto);
 
-        //conjunto.addAll(numeros); //União entre dois conjuntos
-        conjunto.retainAll(numeros); //Retorna os valores que os conjuntos tem em comum
+        conjunto.addAll(numeros);
         System.out.println(conjunto);
 
-        conjunto.clear();
-        System.out.println(conjunto);
+        conjunto.retainAll(numeros);
+        System.out.println(numeros);
+
     }
 }
