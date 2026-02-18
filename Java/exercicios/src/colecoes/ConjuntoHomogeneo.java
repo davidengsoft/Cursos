@@ -1,33 +1,37 @@
 package exercicios.src.colecoes;
 
 import java.util.HashSet;
-import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
+import java.util.Set;
 
 public class ConjuntoHomogeneo {
 
     public static void main(String[] args) {
 
-        //Set<String> lista = new HashSet<>();
-        SortedSet<String> lista = new TreeSet<>();
-        lista.add("1.2");
-        lista.add("David");
-        lista.add("Set");
-        lista.add("false");
+        Set<String> listaDeAprovados = new HashSet<>();
+        listaDeAprovados.add("Ana");
+        listaDeAprovados.add("Carlos");
+        listaDeAprovados.add("Luca");
+        listaDeAprovados.add("Pedro");
 
-        for(String caracteres: lista) {
-            System.out.println(caracteres);
+        System.out.println("Candidatos aprovados\n");
+        for (String candidato : listaDeAprovados) {
+            System.out.println(candidato);
         }
 
-        Set<Integer> numeros = new HashSet<>();
-        numeros.add(1);
-        numeros.add(2);
-        numeros.add(120);
-        numeros.add(6);
+        System.out.println("\n======================\n");
 
-        for (int n: numeros) {
-            System.out.println(n);
+        SortedSet<String> listaDeReprovados = new TreeSet<>();
+        listaDeReprovados.add("David");
+        listaDeReprovados.add("Mathias");
+        listaDeReprovados.add("José");
+        listaDeReprovados.add("Guilherme");
+
+
+        System.out.println("Candidatos reprovados\n");
+        for (String candidato : listaDeReprovados) {
+            System.out.println(candidato);
         }
     }
 }
