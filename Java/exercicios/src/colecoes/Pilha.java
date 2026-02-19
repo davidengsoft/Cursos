@@ -10,20 +10,18 @@ public class Pilha {
         Deque<String> livros = new ArrayDeque<>();
 
         livros.add("O Pequeno Príncipe");
-        livros.push("Don Quixote");
+        livros.push("Don Qhixote");
         livros.push("O Hobbit");
 
         System.out.println(livros.peek());
         System.out.println(livros.element());
 
-        System.out.println(livros.poll());
+        System.out.println("================");
+
         System.out.println(livros.pop());
+        System.out.println(livros.poll());
         System.out.println(livros.remove());
 
-        System.out.println(livros.size());
 
-        livros.clear();
-        System.out.println(livros.contains("O Pequeno Príncipe"));
-        System.out.println(livros.isEmpty());
     }
 }
