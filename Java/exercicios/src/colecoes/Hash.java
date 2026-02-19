@@ -7,12 +7,12 @@ public class Hash {
     public static void main(String[] args) {
 
         HashSet<Usuario> usuarios = new HashSet<>();
-
         usuarios.add(new Usuario("David"));
-        usuarios.add(new Usuario("Ana"));
-        usuarios.add(new Usuario("Guilherme"));
+        usuarios.add(new Usuario("Glória"));
+        usuarios.add(new Usuario("Conceição"));
+        usuarios.add(new Usuario("Orlando"));
 
-        boolean resultado = usuarios.contains(new Usuario("Guilherme"));
+        boolean resultado = usuarios.contains(new Usuario("David"));
         System.out.println(resultado);
     }
 }

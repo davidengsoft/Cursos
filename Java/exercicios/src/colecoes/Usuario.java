@@ -23,6 +23,6 @@ public class Usuario {
 
 
     public int hashCode() {
-        return Objects.hashCode(nome);
+        return this.nome.length();
     }
 }
