@@ -9,15 +9,32 @@ public class Fila {
 
         Queue<String> fila = new LinkedList<>();
 
-        fila.add("Ana");
-        fila.offer("Bia");
-        fila.add("Carlos");
-        fila.offer("Daniel");
-        fila.add("Rafaela");
-        fila.offer("Guilherme");
+        // Offer e Add -> adicionam elementos na fila
 
-        System.out.println(fila.peek());  //Os métodos peek e element retorna o primeiro nome da lista.
-        System.out.println(fila.element()); //A diferença entre os dois está no comportamento específico quando a fila estiver vazia
-        System.out.println();
+        // A diferença é o comportamento
+        // qunado a fila está cheia
+        fila.add("Ana");  // Lançará uma exceção caso a fila esteja cheia.
+        fila.offer("Bia");
+        fila.offer("Carlos");
+        fila.offer("Daniel");// Retorna falso caso a fila esteja cheia.
+        fila.offer("Rafaela");
+
+        // Peek e element -> obter próximo elemento da fila (sem remover)
+
+        // A diferença é o comprotamento quando a fila está vazia.
+        System.out.println(fila.peek()); // retorna null se a fila estiver vazia.
+        System.out.println(fila.element());// lança uma exceção se a fila estiver vazia.
+
+        System.out.println("===================");
+        // poll() e remove() -> obtem próximo elemento da fila e remove.
+        System.out.println(fila.poll()); // Retorna NULL se a fila estiver vazia
+        System.out.println(fila.remove());
+        System.out.println(fila.poll());
+        System.out.println(fila.poll());
+        System.out.println(fila.remove());// Lança uma exceção se a fila estiver vazia
+
+
+
+
     }
 }
