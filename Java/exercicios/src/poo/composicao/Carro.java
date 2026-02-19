@@ -2,14 +2,10 @@ package exercicios.src.poo.composicao;
 
 public class Carro {
 
-    Motor motor; //Apenas declaração. Objeto não instanciado.
+    final Motor motor;
 
-
-    Carro () {
-        this.motor = new Motor(this); /*Quando intanciar um objeto da classe Carro, ele irá
-                                              ser passado como argumento para o contrutor da classe
-                                              Motor. Sendo assim, this é o objeto c1 criado em CarroTeste. */
-
+    Carro() {
+        this.motor = new Motor(this);
     }
 
     void acelerar() {
@@ -17,7 +13,9 @@ public class Carro {
     }
 
     void frear() {
-        if (motor.fatorInjecao > 0.5) motor.fatorInjecao -= 0.4;
+        if (motor.fatorInjecao > 0.5) {
+            motor.fatorInjecao -= 0.4;
+        }
     }
 
     void ligar() {
