@@ -1,25 +1,16 @@
 package exercicios.src.poo.composicao;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Aluno {
 
-    final String nome;
-    final List<Curso> cursos = new ArrayList<>();
+    final String NOME;
+    List<Curso> cursos = new ArrayList<>();
 
-    Aluno(String nome) {
-        this.nome = nome;
-    }
-
-    Curso obterCusroPorNome(String nome) {
-        for (Curso curso: this.cursos) {
-            if (curso.nome.equalsIgnoreCase(nome)) {
-                return curso;
-            }
-        }
-
-        return null;
+    Aluno(String NOME) {
+        this.NOME = NOME;
     }
 
     void adicionarCurso(Curso curso) {
@@ -27,8 +18,19 @@ public class Aluno {
         curso.alunos.add(this);
     }
 
+    Curso obterCursoPorNome(String nome) {
+
+        for (Curso curso : this.cursos) {
+            if(curso.NOME.equalsIgnoreCase(nome)){
+                return curso;
+            }
+        }
+
+        return null;
+    }
 
     public String toString() {
-        return nome;
+        return this.NOME;
     }
+
 }
