@@ -2,11 +2,11 @@ package exercicios.src.poo.composicao.desafio;
 
 public class Item {
 
-    final Produto produto;
-    final int quantidade;
+    Produto produto;
+    int quant;
 
-    Item(Produto produto, int quantidade) {
+    Item(Produto produto, int quant) {
         this.produto = produto;
-        this.quantidade = quantidade;
+        this.quant = quant;
     }
 }

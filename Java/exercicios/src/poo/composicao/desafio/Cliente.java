@@ -5,25 +5,25 @@ import java.util.List;
 
 public class Cliente {
 
-    final String nome;
-    final List<Compra> compras = new ArrayList<>();
+    List<Compra> compras = new ArrayList<>();
+    String nome;
 
-    Cliente(String nome) {
+    Cliente(String nome){
         this.nome = nome;
     }
 
     void adicionarCompra(Compra compra) {
-        this.compras.add(compra);
+        compras.add(compra);
     }
 
-    double getValorTotal() {
-        double total = 0;
+    double valorTotal() {
+        double valorTotal = 0;
 
-        for (Compra c: compras) {
-            total += c.getValorTotal();
+        for (Compra compra : compras) {
+           valorTotal += compra.valorDosItens();
         }
 
-        return total;
-    }
+        return valorTotal;
+   }
 
 }

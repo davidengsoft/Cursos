@@ -5,20 +5,20 @@ import java.util.List;
 
 public class Compra {
 
-    final List<Item> carrinho = new ArrayList<>();
+    List<Item> itens = new ArrayList<>();
 
-    void adicionarItem(String nome, double preco, int quant) {
-        var produto = new Produto(nome, preco);
-        this.carrinho.add(new Item(produto, quant));
+    void adicionarItem(String nome, double valor, int quant) {
+        Produto p = new Produto(nome, valor);
+        itens.add(new Item(p, quant));
     }
 
-    double getValorTotal() {
-        double total = 0;
+    double valorDosItens() {
+        double valor = 0;
 
-        for (Item item: carrinho) {
-            total += item.quantidade * item.produto.preco;
+        for (Item item : itens) {
+            valor += (item.quant * item.produto.preco);
         }
 
-        return total;
+        return valor;
     }
 }
