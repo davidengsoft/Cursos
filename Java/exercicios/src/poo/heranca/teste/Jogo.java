@@ -8,13 +8,8 @@ public class Jogo {
 
     public static void main(String[] args) {
 
-        Jogador monstro = new Monstro();
-        monstro.setY(10);
-        monstro.setX(10);
-
-        Jogador heroi = new Heroi();
-        heroi.setY(11);
-        heroi.setX(10);
+        Jogador monstro = new Monstro(10, 10);
+        Jogador heroi = new Heroi(10, 11);
 
         System.out.println(monstro.getVida());
         System.out.println(heroi.getVida());
