@@ -2,41 +2,33 @@ package exercicios.src.poo.heranca.desafio;
 
 public class Carro {
 
-    protected final int VELOCIDADE_MAXIMA;
-    protected int velocidadeAtual = 0;
-    private int delta = 5;
+    private double velocidadeAtual = 0.0;
 
-    Carro(int velocidadeMaxima) {
-        this.VELOCIDADE_MAXIMA = velocidadeMaxima;
-    }
-
-
-    public void acelerar() {
-        if (velocidadeAtual + getDelta() > VELOCIDADE_MAXIMA) {
-            velocidadeAtual = VELOCIDADE_MAXIMA;
-        } else {
-            velocidadeAtual += getDelta();
-        }
+    public void acelerar(){
+        velocidadeAtual += 5;
     }
 
     public void frear() {
-        if (velocidadeAtual >= getDelta()) {
-            velocidadeAtual -= getDelta();
+        if (velocidadeAtual >= 5) {
+            velocidadeAtual -= 5;
         } else {
             velocidadeAtual = 0;
-
         }
     }
 
+    public double getVelocidadeAtual() {
+        return velocidadeAtual;
+    }
+
+    public void setVelocidadeAtual(double velocidadeAtual) {
+        if (velocidadeAtual >= 0) {
+            this.velocidadeAtual = velocidadeAtual;
+        }
+
+    }
+
+    @Override
     public String toString() {
-        return "Velocidade atual => " + this.velocidadeAtual + "km/h";
-    }
-
-    public int getDelta() {
-        return delta;
-    }
-
-    public void setDelta(int delta) {
-        this.delta = delta;
+        return "A velocidade atual do carro é " + this.velocidadeAtual + "km/h";
     }
 }
