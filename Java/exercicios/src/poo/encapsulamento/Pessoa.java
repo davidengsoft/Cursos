@@ -2,17 +2,22 @@ package exercicios.src.poo.encapsulamento;
 
 public class Pessoa {
 
+    private int idade = 0;
     private String nome;
-    private int idade;
 
-    Pessoa(String nome, int idade) {
-        setNome(nome);
+    public Pessoa(int idade, String nome){
         setIdade(idade);
+        setNome(nome);
     }
 
-    // Getter
     public int getIdade() {
         return idade;
+    }
+
+    public void setIdade(int idade) {
+        if(idade >= 0) {
+            this.idade = idade;
+        }
     }
 
     public String getNome() {
@@ -23,15 +28,8 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    // Setter
-    public void setIdade(int novaIdade) {
-        if (novaIdade >= 0 && novaIdade <= 120){
-            this.idade = novaIdade;
-        }
-    }
-
-
+    @Override
     public String toString() {
-        return "Olá eu sou o " + getNome() + " e tenho " + getIdade() + " anos.";
+        return "Meu nome é " + this.nome + " e tenho " + this.idade + " anos";
     }
 }

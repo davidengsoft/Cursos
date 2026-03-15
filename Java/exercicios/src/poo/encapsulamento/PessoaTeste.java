@@ -4,14 +4,9 @@ public class PessoaTeste {
 
     public static void main(String[] args) {
 
-        Pessoa p1 = new Pessoa("David",230);
-        p1.setIdade(-30);
-        System.out.println(p1.getIdade());
+        Pessoa p1 = new Pessoa(-10, "David");
+        p1.setIdade(20);
 
-        p1.setIdade(19);
-        System.out.println(p1.getIdade());
-
-        System.out.println(p1.toString());
-
+        System.out.println(p1);
     }
 }
