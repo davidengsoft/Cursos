@@ -2,12 +2,12 @@ package exercicios.src.poo.encapsulamento.casaA;
 
 public class Paulo {
 
-    Ana irma = new Ana();
+    Ana esposa = new Ana();
 
-    void testeAcessos() {
-        //System.out.println(irma.segredo);
-        System.out.println(irma.fazDentroDeCasa);
-        System.out.println(irma.formaDeFalar);
-        System.out.println(irma.todosSabem);
+    void testeAcesso() {
+        //System.out.println(esposa.segredo);
+        System.out.println(esposa.feitoDentroDeCasa);
+        System.out.println(esposa.formaDeFalar);
+        System.out.println(esposa.todosSabem);
     }
 }
