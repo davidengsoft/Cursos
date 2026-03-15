@@ -4,19 +4,21 @@ public class Jantar {
 
     public static void main(String[] args) {
 
-        Pessoa david = new Pessoa(66.00);
-        System.out.println(david.getPeso());
+        Pessoa convidado = new Pessoa(85.5);
 
-        Arroz arroz = new Arroz(0.150);
-        Feijao feijao = new Feijao(0.180);
-        Sorvete sorvete = new Sorvete(0.400);
-        //Comida comida = new Comida(); //Não posso instanciar um objeto da classe comida, pois ela foi classificada como abstract
+        Comida arroz = new Arroz(0.200);
+        Comida feijao = new Feijao(0.180);
 
+        System.out.println(convidado.getPeso());
 
-        david.comer(arroz);
-        david.comer(feijao);
-        david.comer(sorvete);
-        System.out.println(david.getPeso());
+        convidado.comer(arroz);
+        convidado.comer(feijao);
+        System.out.println(convidado.getPeso());
+
+        Comida sorvete = new Sorvete(0.100);
+
+        convidado.comer(sorvete);
+        System.out.println(convidado.getPeso());
 
     }
 

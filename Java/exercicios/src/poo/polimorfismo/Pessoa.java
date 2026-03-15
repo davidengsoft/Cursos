@@ -8,15 +8,18 @@ public class Pessoa {
         setPeso(peso);
     }
 
-    public void comer(Comida comida) {
-        this.peso += comida.getPeso();
-    }
-
     public double getPeso() {
         return peso;
     }
 
     public void setPeso(double peso) {
-        this.peso = peso;
+        if (peso > 0) {
+            this.peso = peso;
+        }
+    }
+
+
+    public void comer(Comida comida){
+        this.peso += comida.getPeso();
     }
 }

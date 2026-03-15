@@ -1,6 +1,6 @@
 package exercicios.src.poo.polimorfismo;
 
-public abstract class Comida {
+public class Comida {
 
     private double peso;
 
@@ -13,6 +13,8 @@ public abstract class Comida {
     }
 
     public void setPeso(double peso) {
-        this.peso = peso;
+        if (peso > 0) {
+            this.peso = peso;
+        }
     }
 }
