@@ -8,14 +8,17 @@ public class CarroTeste {
 
     public static void main(String[] args) {
 
-        Carro ferrari = new Ferrari("Ferrari", 15, 340);
+        Ferrari ferrari = new Ferrari("Ferrari", 15, 340);
         System.out.println("========================\nFerrari\n========================");
         ferrari.acelerar();
         ferrari.acelerar();
+
+        ferrari.ligarTurbo();
         ferrari.acelerar();
         ferrari.acelerar();
         ferrari.acelerar();
 
+        ferrari.desligarTurbo();
         System.out.println(ferrari);
 
         ferrari.frear();

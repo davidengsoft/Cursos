@@ -5,20 +5,20 @@ public class Carro {
     private final String MODELO;
     private int velocidadeAtual = 0;
     private final int VELOCIDADE_MAXIMA;
-    private final int FATOR_ACELERACAO;
+    private int fatorAceleracao;
 
     public Carro(String modelo, int  fatorAceleracao, int velocidadeMaxima) {
         this.MODELO = modelo;
-        this.FATOR_ACELERACAO = fatorAceleracao;
+        this.fatorAceleracao = fatorAceleracao;
         this.VELOCIDADE_MAXIMA = velocidadeMaxima;
     }
 
     public void acelerar(){
 
-        if (velocidadeAtual + FATOR_ACELERACAO > VELOCIDADE_MAXIMA){
+        if (velocidadeAtual + fatorAceleracao > VELOCIDADE_MAXIMA){
             velocidadeAtual = VELOCIDADE_MAXIMA;
         } else {
-            velocidadeAtual += FATOR_ACELERACAO;
+            velocidadeAtual += fatorAceleracao;
         }
 
     }
@@ -48,8 +48,14 @@ public class Carro {
         return VELOCIDADE_MAXIMA;
     }
 
-    public int getFATOR_ACELERACAO() {
-        return FATOR_ACELERACAO;
+    public int getFatorAceleracao() {
+        return fatorAceleracao;
+    }
+
+    public void setFatorAceleracao(int fatorAceleracao) {
+        if (fatorAceleracao >= 0) {
+            this.fatorAceleracao = fatorAceleracao;
+        }
     }
 
     @Override
