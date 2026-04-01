@@ -6,5 +6,8 @@ public abstract class Animal {
         return "CO2";
     }
 
-    public abstract String andar();
+    public abstract String mover();
+
+    public abstract String caracteristicaPrincipal();
+
 }

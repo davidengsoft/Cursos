@@ -4,9 +4,9 @@ public class TesteAbstrato {
 
     public static void main(String[] args) {
 
-        Mamifero cachorro = new Carrocho();
-        System.out.println(cachorro.andar());
-        System.out.println(cachorro.respirar());
-        System.out.println(cachorro.seAlimentar());
+        Mamifero a = new Carrocho();
+        System.out.println(a.caracteristicaPrincipal());
+        System.out.println(a.mover());
+        System.out.println(a.respirar());
     }
 }
