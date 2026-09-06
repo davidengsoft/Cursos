@@ -4,6 +4,7 @@ public class Carro {
 
     private int velocidadeAtual;
 
+
     public int getVelocidadeAtual() {
         return velocidadeAtual;
     }
