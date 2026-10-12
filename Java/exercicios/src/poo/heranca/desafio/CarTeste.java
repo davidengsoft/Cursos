@@ -14,9 +14,14 @@ public class CarTeste {
         ferrari.acelerar();
 
         ferrari.ligarTurbo();
+        ferrari.acelerar();
 
+        ferrari.ligarAr();
         ferrari.acelerar();
-        ferrari.acelerar();
+
+        ferrari.desligarAr();
+        ferrari.desligarTurbo();
+
         System.out.println(ferrari);
     }
 }
