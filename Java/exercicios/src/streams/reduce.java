@@ -30,6 +30,6 @@ public class reduce {
                 .map(apenasNota)
                 .reduce(new Media(), calcularMedia, combinarMedia);
 
-        System.out.println("A média da nota dos aprovados é " + media.getMedia());
+        System.out.printf("A média da nota dos aprovados é %.2f", media.getMedia());
     }
 }
