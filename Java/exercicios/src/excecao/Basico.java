@@ -28,6 +28,6 @@ public class Basico {
     }
 
      public static void imprimirAluno(Aluno aluno) {
-        System.out.println(aluno.nome);
+        System.out.println(aluno.getNome());
      }
 }

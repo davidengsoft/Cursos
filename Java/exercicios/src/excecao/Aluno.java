@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Aluno {
 
-    final String nome;
-    final double nota;
+    private String nome;
+    private double nota;
 
     public Aluno(String nome, double nota) {
         this.nome = nome;
@@ -27,5 +27,13 @@ public class Aluno {
     @Override
     public int hashCode() {
         return Objects.hash(nome, nota);
+    }
+
+    public double getNota() {
+        return nota;
+    }
+
+    public String getNome() {
+        return nome;
     }
 }
