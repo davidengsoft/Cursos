@@ -20,7 +20,7 @@ public class Campo {
 
     }
 
-    boolean adicionarVizinho(Campo vizinho){
+    public boolean adicionarVizinho(Campo vizinho){
         boolean linhaDiferente = linha != vizinho.linha;
         boolean colunaDiferente = coluna != vizinho.coluna;
         boolean diagonal = linhaDiferente && colunaDiferente;
