@@ -13,7 +13,7 @@ public class CampoTeste {
     }
 
     @Test
-    void testeVizinhoRealDistancia1() {
+    void testeVizinhoEsquerda() {
         iniciarCampo();
 
         Campo vizinho = new Campo(3, 2);
@@ -22,7 +22,35 @@ public class CampoTeste {
         assertTrue(resultado);
     }
 
+    @Test
+    void testeVizinhoDireita() {
+        iniciarCampo();
 
+        Campo vizinho = new Campo(3, 4);
+        boolean resultado = campo.adicionarVizinho(vizinho);
+
+        assertTrue(resultado);
+    }
+
+    @Test
+    void testeVizinhoEmcima() {
+        iniciarCampo();
+
+        Campo vizinho = new Campo(2, 3);
+        boolean resultado = campo.adicionarVizinho(vizinho);
+
+        assertTrue(resultado);
+    }
+
+    @Test
+    void testeVizinhoEmbaixo() {
+        iniciarCampo();
+
+        Campo vizinho = new Campo(4, 3);
+        boolean resultado = campo.adicionarVizinho(vizinho);
+
+        assertTrue(resultado);
+    }
 
 
 }
