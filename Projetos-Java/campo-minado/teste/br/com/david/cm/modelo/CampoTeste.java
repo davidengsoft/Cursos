@@ -2,7 +2,7 @@ package br.com.david.cm.modelo;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CampoTeste {
 
@@ -13,7 +13,7 @@ public class CampoTeste {
     }
 
     @Test
-    void testeVizinhoEsquerda() {
+    void testeVizinhoEsquerdaDistancia01() {
         iniciarCampo();
 
         Campo vizinho = new Campo(3, 2);
@@ -23,7 +23,7 @@ public class CampoTeste {
     }
 
     @Test
-    void testeVizinhoDireita() {
+    void testeVizinhoDireitaDistancia01() {
         iniciarCampo();
 
         Campo vizinho = new Campo(3, 4);
@@ -33,7 +33,7 @@ public class CampoTeste {
     }
 
     @Test
-    void testeVizinhoEmcima() {
+    void testeVizinhoEmcimaDistancia01() {
         iniciarCampo();
 
         Campo vizinho = new Campo(2, 3);
@@ -43,7 +43,7 @@ public class CampoTeste {
     }
 
     @Test
-    void testeVizinhoEmbaixo() {
+    void testeVizinhoEmbaixoDistancia01() {
         iniciarCampo();
 
         Campo vizinho = new Campo(4, 3);
@@ -52,5 +52,24 @@ public class CampoTeste {
         assertTrue(resultado);
     }
 
+    @Test
+    void testeVizinhoDistancia02() {
+        iniciarCampo();
+
+        Campo vizinho = new Campo(2, 2);
+        boolean resultado = campo.adicionarVizinho(vizinho);
+
+        assertTrue(resultado);
+    }
+
+    @Test
+    void testeNaoVizinhoDistancia02() {
+        iniciarCampo();
+
+        Campo vizinho = new Campo(1, 1);
+        boolean resultado = campo.adicionarVizinho(vizinho);
+
+        assertFalse(resultado);
+    }
 
 }
