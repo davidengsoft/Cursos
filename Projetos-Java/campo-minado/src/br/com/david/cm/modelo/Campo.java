@@ -1,6 +1,8 @@
 package br.com.david.cm.modelo;
 
 
+import br.com.david.cm.excecao.ExplosaoException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +40,25 @@ public class Campo {
         if (deltaGeral == 2 && diagonal) {
             vizinhos.add(vizinho);
             return true;
+        }
+
+        return false;
+    }
+
+    void alternarMarcacao() {
+        if (!aberto) {
+            marcado = !marcado;
+        }
+    }
+
+    boolean abrir() {
+
+        if (!aberto && !marcado) {
+            aberto = true;
+
+            if (minado) {
+                throw new ExplosaoException("O campo estava minado");
+            }
         }
 
         return false;
