@@ -1,5 +1,6 @@
 package br.com.david.cm.modelo;
 
+import br.com.david.cm.excecao.ExplosaoException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -84,5 +85,30 @@ public class CampoTeste {
         iniciarCampo();
 
         assertTrue(campo.abrir());
+    }
+
+    @Test
+    void testeAbrirCampoNaoMinadoMarcado() {
+        iniciarCampo();
+        campo.alternarMarcacao();
+
+        assertFalse(campo.abrir());
+    }
+
+    @Test
+    void testeAbrirCampMinadoMarcado() {
+        iniciarCampo();
+        campo.alternarMarcacao();
+        campo.minar();
+
+        assertFalse(campo.abrir());
+    }
+
+    @Test
+    void testeAbrirCampMinadoNaoMarcado() {
+        iniciarCampo();
+        campo.minar();
+
+        assertThrows(ExplosaoException.class, () -> campo.abrir());
     }
 }

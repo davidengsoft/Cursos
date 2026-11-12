@@ -15,7 +15,7 @@ public class Campo {
     private boolean minado;
     private boolean marcado;
 
-    private List<Campo> vizinhos = new ArrayList<Campo>();
+    private List<Campo> vizinhos = new ArrayList<>();
 
 
     Campo(int linha, int coluna) {
@@ -63,6 +63,7 @@ public class Campo {
             if (vizinhancaSegura()) {
                 vizinhos.forEach(campo -> campo.abrir());
             }
+            return true;
         }
 
         return false;
@@ -73,6 +74,11 @@ public class Campo {
         return vizinhos.stream().noneMatch(v -> v.minado);
     }
 
+
+    void minar() {
+        minado = true;
+
+    }
 
     public boolean isMarcado() {
         return marcado;
