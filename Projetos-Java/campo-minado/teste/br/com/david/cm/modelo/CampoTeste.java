@@ -72,4 +72,10 @@ public class CampoTeste {
         assertFalse(resultado);
     }
 
+    @Test
+    void testeAlternarMarcacao() {
+        iniciarCampo();
+
+        assertFalse(campo.isMarcado());
+    }
 }
