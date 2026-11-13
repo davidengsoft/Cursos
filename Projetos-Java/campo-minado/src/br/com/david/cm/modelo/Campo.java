@@ -61,7 +61,7 @@ public class Campo {
             }
 
             if (vizinhancaSegura()) {
-                vizinhos.forEach(campo -> campo.abrir());
+                vizinhos.forEach(v -> v.abrir());
             }
             return true;
         }
@@ -82,6 +82,10 @@ public class Campo {
 
     public boolean isMarcado() {
         return marcado;
+    }
+
+    public boolean isAberto() {
+        return aberto;
     }
 
 
