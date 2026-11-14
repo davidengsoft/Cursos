@@ -130,7 +130,7 @@ public class Campo {
         } else if (aberto) {
             return " ";
         } else {
-            return "?";
+            return "-";
         }
 
 
