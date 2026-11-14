@@ -64,7 +64,7 @@ public class Tabuleiro {
 
     }
 
-    public void AlterarMarcacao(int linha, int coluna) {
+    public void alterarMarcacao(int linha, int coluna) {
         campos.parallelStream()
                 .filter(c -> c.getLinha() == linha && c.getColuna() == coluna)
                 .findFirst()
