@@ -57,4 +57,19 @@ public class Tabuleiro {
     }
 
 
+    public boolean objetivoAlcancado() {
+        return campos.stream().anyMatch(c -> c.objetivoAlcancado());
+    }
+
+    public void reiniciar() {
+        campos.stream().forEach(c -> c.reiniciar());
+        sortearMinas();
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        return "";
+    }
 }
