@@ -60,24 +60,24 @@ public class Tabuleiro {
         campos.parallelStream()
                 .filter(c -> c.getLinha() == linha && c.getColuna() == coluna)
                 .findFirst()
-                .ifPresent(c -> c.abrir());
-
+                .ifPresent(Campo::abrir);
     }
 
     public void alterarMarcacao(int linha, int coluna) {
         campos.parallelStream()
                 .filter(c -> c.getLinha() == linha && c.getColuna() == coluna)
                 .findFirst()
-                .ifPresent(c -> c.alternarMarcacao());
+                .ifPresent(Campo::alternarMarcacao);
 
     }
 
     public boolean objetivoAlcancado() {
-        return campos.stream().anyMatch(c -> c.objetivoAlcancado());
+        return campos.stream().anyMatch(Campo::objetivoAlcancado);
     }
 
     public void reiniciar() {
-        campos.stream().forEach(c -> c.reiniciar());
+        campos.stream().forEach(Campo::reiniciar);
+
         sortearMinas();
     }
 
