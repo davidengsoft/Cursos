@@ -11,9 +11,9 @@ public class Campo {
     private final int linha;
     private final int coluna;
 
-    private boolean aberto;
-    private boolean minado;
-    private boolean marcado;
+    private boolean aberto = false;
+    private boolean minado = false;
+    private boolean marcado = false;
 
     private final List<Campo> vizinhos = new ArrayList<>();
 
@@ -77,7 +77,6 @@ public class Campo {
 
     void minar() {minado = true;}
 
-
     public boolean isMarcado() {
         return marcado;
     }
@@ -104,7 +103,7 @@ public class Campo {
         boolean desvendado = !minado && aberto;
         boolean protegido = minado && marcado;
 
-        return desvendado && protegido;
+        return desvendado || protegido;
     }
 
     long minasNaVizinhanca() {
