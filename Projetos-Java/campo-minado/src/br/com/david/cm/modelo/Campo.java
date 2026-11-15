@@ -103,7 +103,7 @@ public class Campo {
         boolean desvendado = !minado && aberto;
         boolean protegido = minado && marcado;
 
-        return desvendado || protegido;
+        return desvendado && protegido;
     }
 
     long minasNaVizinhanca() {
