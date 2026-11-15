@@ -85,7 +85,6 @@ public class Tabuleiro {
 
     public void reiniciar() {
         campos.stream().forEach(Campo::reiniciar);
-
         sortearMinas();
     }
 
