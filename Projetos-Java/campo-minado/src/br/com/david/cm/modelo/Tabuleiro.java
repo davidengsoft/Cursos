@@ -80,7 +80,7 @@ public class Tabuleiro {
     }
 
     public boolean objetivoAlcancado() {
-        return campos.stream().anyMatch(Campo::objetivoAlcancado);
+        return campos.stream().allMatch(Campo::objetivoAlcancado);
     }
 
     public void reiniciar() {
