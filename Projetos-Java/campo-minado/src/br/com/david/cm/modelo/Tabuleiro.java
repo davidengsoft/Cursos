@@ -8,9 +8,9 @@ import java.util.function.Predicate;
 
 public class Tabuleiro {
 
-    private int linhas;
-    private int colunas;
-    private int minas;
+    private final int linhas;
+    private final int colunas;
+    private final int minas;
 
     private final List<Campo> campos =  new ArrayList<>();
 
@@ -26,7 +26,7 @@ public class Tabuleiro {
 
     private void sortearMinas() {
         long minasArmadas = 0;
-        Predicate<Campo> minado = c -> c.isMinado();
+        Predicate<Campo> minado = Campo::isMinado;
 
         do {
             minasArmadas = campos.stream().filter(minado).count();
