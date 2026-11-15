@@ -1,5 +1,7 @@
 package br.com.david.cm.modelo;
 
+import br.com.david.cm.excecao.ExplosaoException;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -57,10 +59,16 @@ public class Tabuleiro {
     }
 
     public void abrir(int linha, int coluna) {
-        campos.stream()
-                .filter(c -> c.getLinha() == linha && c.getColuna() == coluna)
-                .findFirst()
-                .ifPresent(Campo::abrir);
+
+        try {
+            campos.stream()
+                    .filter(c -> c.getLinha() == linha && c.getColuna() == coluna)
+                    .findFirst()
+                    .ifPresent(Campo::abrir);
+        } catch (ExplosaoException e) {
+            campos.forEach(c -> c.setAberto(true));
+            throw e;
+        }
     }
 
     public void alterarMarcacao(int linha, int coluna) {
